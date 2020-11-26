@@ -13,24 +13,7 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c80208f3-e747-4432-8b66-7dbd58e863df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/m3u8_parser.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Check.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Test_lib__tests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/error.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_m3u8_files/media_list.m3u8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_m3u8_files/playlist.m3u8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_m3u8_files/save_twitch_ad_media_list.m3u8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_m3u8_files/twitch_ad_media_list.m3u8" afterDir="false" />
-    </list>
+    <list default="true" id="c80208f3-e747-4432-8b66-7dbd58e863df" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,11 +44,15 @@
     </option>
   </component>
   <component name="ProjectId" id="1kpNgDEBKvQWIpEG2UOb2JFvs5t" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -74,6 +61,11 @@
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager" selected="Cargo.Test lib::tests">
     <list>
@@ -96,8 +88,16 @@
       <workItem from="1606393682944" duration="4272000" />
       <workItem from="1606398034298" duration="69000" />
       <workItem from="1606398117610" duration="53000" />
-      <workItem from="1606398397049" duration="320000" />
+      <workItem from="1606398397049" duration="463000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit.">
+      <created>1606398842330</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606398842330</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +115,11 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Initial commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit." />
+  </component>
   <component name="WindowStateProjectService">
     <state x="356" y="175" width="1079" height="725" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606398628730">
       <screen x="0" y="25" width="1792" height="997" />
@@ -124,21 +129,25 @@
       <screen x="0" y="25" width="1792" height="997" />
     </state>
     <state x="662" y="176" key="#com.intellij.ide.util.MemberChooser/0.25.1792.997@0.25.1792.997" timestamp="1606397190856" />
-    <state width="1738" height="436" key="GridCell.Tab.0.bottom" timestamp="1606398714178">
+    <state width="1738" height="436" key="GridCell.Tab.0.bottom" timestamp="1606398860478">
       <screen x="0" y="25" width="1792" height="997" />
     </state>
-    <state width="1738" height="436" key="GridCell.Tab.0.bottom/0.25.1792.997@0.25.1792.997" timestamp="1606398714178" />
-    <state width="1738" height="436" key="GridCell.Tab.0.center" timestamp="1606398714177">
+    <state width="1738" height="436" key="GridCell.Tab.0.bottom/0.25.1792.997@0.25.1792.997" timestamp="1606398860478" />
+    <state width="1738" height="436" key="GridCell.Tab.0.center" timestamp="1606398860477">
       <screen x="0" y="25" width="1792" height="997" />
     </state>
-    <state width="1738" height="436" key="GridCell.Tab.0.center/0.25.1792.997@0.25.1792.997" timestamp="1606398714177" />
-    <state width="1738" height="436" key="GridCell.Tab.0.left" timestamp="1606398714177">
+    <state width="1738" height="436" key="GridCell.Tab.0.center/0.25.1792.997@0.25.1792.997" timestamp="1606398860477" />
+    <state width="1738" height="436" key="GridCell.Tab.0.left" timestamp="1606398860476">
       <screen x="0" y="25" width="1792" height="997" />
     </state>
-    <state width="1738" height="436" key="GridCell.Tab.0.left/0.25.1792.997@0.25.1792.997" timestamp="1606398714177" />
-    <state width="1738" height="436" key="GridCell.Tab.0.right" timestamp="1606398714177">
+    <state width="1738" height="436" key="GridCell.Tab.0.left/0.25.1792.997@0.25.1792.997" timestamp="1606398860476" />
+    <state width="1738" height="436" key="GridCell.Tab.0.right" timestamp="1606398860477">
       <screen x="0" y="25" width="1792" height="997" />
     </state>
-    <state width="1738" height="436" key="GridCell.Tab.0.right/0.25.1792.997@0.25.1792.997" timestamp="1606398714177" />
+    <state width="1738" height="436" key="GridCell.Tab.0.right/0.25.1792.997@0.25.1792.997" timestamp="1606398860477" />
+    <state x="396" y="197" key="Vcs.Push.Dialog.v2" timestamp="1606398844630">
+      <screen x="0" y="25" width="1792" height="997" />
+    </state>
+    <state x="396" y="197" key="Vcs.Push.Dialog.v2/0.25.1792.997@0.25.1792.997" timestamp="1606398844630" />
   </component>
 </project>

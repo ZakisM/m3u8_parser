@@ -6,7 +6,7 @@ use nom::Finish;
 
 use crate::error::M3U8ParserError;
 
-mod error;
+pub mod error;
 
 #[derive(Debug)]
 pub struct Playlist<'a> {
