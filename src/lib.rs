@@ -200,7 +200,7 @@ pub struct MediaList<'a> {
 }
 
 impl<'a> MediaList<'a> {
-    pub fn save<T: std::io::Write>(&self, output: &mut T) -> Result<(), M3U8ParserError<()>> {
+    pub fn save<T: std::io::Write>(&self, output: &mut T) -> Result<(), M3U8ParserError<&str>> {
         let ext_tag = "#EXT";
 
         writeln!(output, "#EXTM3U")?;
