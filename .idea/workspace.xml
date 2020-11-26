@@ -13,7 +13,9 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c80208f3-e747-4432-8b66-7dbd58e863df" name="Default Changelist" comment="" />
+    <list default="true" id="c80208f3-e747-4432-8b66-7dbd58e863df" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/error.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/error.rs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +69,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Cargo.Test lib::tests">
+  <component name="RunManager" selected="Cargo.Check">
     <list>
       <item itemvalue="Cargo.Check" />
       <item itemvalue="Cargo.Test lib::tests" />
@@ -89,6 +91,7 @@
       <workItem from="1606398034298" duration="69000" />
       <workItem from="1606398117610" duration="53000" />
       <workItem from="1606398397049" duration="463000" />
+      <workItem from="1606399136569" duration="345000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1606398842330</created>
@@ -97,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606398842330</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Make error module public.">
+      <created>1606399185149</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606399185149</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,36 +128,37 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit." />
+    <MESSAGE value="Make error module public." />
+    <option name="LAST_COMMIT_MESSAGE" value="Make error module public." />
   </component>
   <component name="WindowStateProjectService">
     <state x="356" y="175" width="1079" height="725" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606398628730">
       <screen x="0" y="25" width="1792" height="997" />
     </state>
     <state x="356" y="175" width="1079" height="725" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1792.997@0.25.1792.997" timestamp="1606398628730" />
-    <state x="662" y="176" key="#com.intellij.ide.util.MemberChooser" timestamp="1606397190856">
+    <state x="662" y="176" key="#com.intellij.ide.util.MemberChooser" timestamp="1606399311981">
       <screen x="0" y="25" width="1792" height="997" />
     </state>
-    <state x="662" y="176" key="#com.intellij.ide.util.MemberChooser/0.25.1792.997@0.25.1792.997" timestamp="1606397190856" />
-    <state width="1738" height="436" key="GridCell.Tab.0.bottom" timestamp="1606398860478">
+    <state x="662" y="176" key="#com.intellij.ide.util.MemberChooser/0.25.1792.997@0.25.1792.997" timestamp="1606399311981" />
+    <state width="1738" height="436" key="GridCell.Tab.0.bottom" timestamp="1606399504248">
       <screen x="0" y="25" width="1792" height="997" />
     </state>
-    <state width="1738" height="436" key="GridCell.Tab.0.bottom/0.25.1792.997@0.25.1792.997" timestamp="1606398860478" />
-    <state width="1738" height="436" key="GridCell.Tab.0.center" timestamp="1606398860477">
+    <state width="1738" height="436" key="GridCell.Tab.0.bottom/0.25.1792.997@0.25.1792.997" timestamp="1606399504248" />
+    <state width="1738" height="436" key="GridCell.Tab.0.center" timestamp="1606399504248">
       <screen x="0" y="25" width="1792" height="997" />
     </state>
-    <state width="1738" height="436" key="GridCell.Tab.0.center/0.25.1792.997@0.25.1792.997" timestamp="1606398860477" />
-    <state width="1738" height="436" key="GridCell.Tab.0.left" timestamp="1606398860476">
+    <state width="1738" height="436" key="GridCell.Tab.0.center/0.25.1792.997@0.25.1792.997" timestamp="1606399504248" />
+    <state width="1738" height="436" key="GridCell.Tab.0.left" timestamp="1606399504247">
       <screen x="0" y="25" width="1792" height="997" />
     </state>
-    <state width="1738" height="436" key="GridCell.Tab.0.left/0.25.1792.997@0.25.1792.997" timestamp="1606398860476" />
-    <state width="1738" height="436" key="GridCell.Tab.0.right" timestamp="1606398860477">
+    <state width="1738" height="436" key="GridCell.Tab.0.left/0.25.1792.997@0.25.1792.997" timestamp="1606399504247" />
+    <state width="1738" height="436" key="GridCell.Tab.0.right" timestamp="1606399504248">
       <screen x="0" y="25" width="1792" height="997" />
     </state>
-    <state width="1738" height="436" key="GridCell.Tab.0.right/0.25.1792.997@0.25.1792.997" timestamp="1606398860477" />
-    <state x="396" y="197" key="Vcs.Push.Dialog.v2" timestamp="1606398844630">
+    <state width="1738" height="436" key="GridCell.Tab.0.right/0.25.1792.997@0.25.1792.997" timestamp="1606399504248" />
+    <state x="396" y="197" key="Vcs.Push.Dialog.v2" timestamp="1606399186081">
       <screen x="0" y="25" width="1792" height="997" />
     </state>
-    <state x="396" y="197" key="Vcs.Push.Dialog.v2/0.25.1792.997@0.25.1792.997" timestamp="1606398844630" />
+    <state x="396" y="197" key="Vcs.Push.Dialog.v2/0.25.1792.997@0.25.1792.997" timestamp="1606399186081" />
   </component>
 </project>

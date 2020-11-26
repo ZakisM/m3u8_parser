@@ -1,4 +1,7 @@
+use std::fmt;
+
 use nom::error::ParseError;
+use nom::lib::std::fmt::Formatter;
 
 #[derive(Debug, PartialEq)]
 pub enum M3U8ParserError<I> {
@@ -7,6 +10,21 @@ pub enum M3U8ParserError<I> {
     ParseFloatError(String),
     ParseIntError(String),
 }
+
+impl<I: fmt::Display> fmt::Display for M3U8ParserError<I> {
+    fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
+        match self {
+            M3U8ParserError::NomError(input, kind) => {
+                write!(f, "{}", nom::error::Error::from_error_kind(input, *kind))
+            }
+            M3U8ParserError::IoError(e) => write!(f, "IO Error: {}", e),
+            M3U8ParserError::ParseFloatError(e) => write!(f, "ParseFloat Error: {}", e),
+            M3U8ParserError::ParseIntError(e) => write!(f, "ParseInt Error: {}", e),
+        }
+    }
+}
+
+impl<I: fmt::Debug + fmt::Display> std::error::Error for M3U8ParserError<I> {}
 
 impl<I> nom::error::ParseError<I> for M3U8ParserError<I> {
     fn from_error_kind(input: I, kind: nom::error::ErrorKind) -> Self {
