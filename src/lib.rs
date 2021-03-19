@@ -86,6 +86,14 @@ impl<T: AsRef<str>> From<T> for PlaylistExtType {
     }
 }
 
+fn to_end(i: &str) -> nom::IResult<&str, &str> {
+    nom::branch::alt((not_newline, to_newline))(i)
+}
+
+fn to_newline(i: &str) -> nom::IResult<&str, &str> {
+    nom::bytes::complete::take_till(|c| c == '\n')(i)
+}
+
 fn not_newline(i: &str) -> nom::IResult<&str, &str> {
     nom::bytes::complete::is_not("\n")(i)
 }
@@ -116,7 +124,7 @@ fn comma_sep_pair(i: &str) -> nom::IResult<&str, (&str, &str)> {
     nom::sequence::separated_pair(
         nom::bytes::complete::is_not(","),
         nom::bytes::complete::tag(","),
-        not_newline,
+        nom::branch::alt((not_newline, to_newline)),
     )(i)
 }
 
@@ -345,7 +353,7 @@ pub fn read_media_list(data: &str) -> Result<MediaList, M3U8ParserError<&str>> {
                 })
             }
             MediaExtType::Unknown(_) => {
-                let (_, unknown_str) = not_newline(i).finish()?;
+                let (_, unknown_str) = to_end(i).finish()?;
 
                 let mut attributes = IndexMap::new();
 
@@ -368,7 +376,7 @@ pub fn read_media_list(data: &str) -> Result<MediaList, M3U8ParserError<&str>> {
                     let duration = duration.parse::<f64>()?;
                     let mut title = None;
 
-                    if tit != "" {
+                    if !tit.is_empty() {
                         title = Some(tit.to_owned());
                     }
 
